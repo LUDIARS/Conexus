@@ -1,0 +1,8 @@
+{
+  "name": "integration-boundary",
+  "description": "NX-V1..4: explicitly authorized bidirectional BOT communication through one quarantine boundary",
+  "presetRules": [],
+  "templateRules": [],
+  "membership": [{"pathPattern": "(^|/)(src|test)/.*\\.ts$"}, {"pathPattern": "(^|/)scripts/.*\\.mjs$"}],
+  "specRefs": ["spec/ux/product.md", "spec/plan/unified-bot-gateway.md", "spec/plan/nuntius-capability-migration.md", "spec/feature/gateway.md", "spec/feature/webhook.md", "spec/interface/http.md", "spec/test/acceptance.md"]
+}

@@ -1,0 +1,24 @@
+services:
+  - code: conexus
+    name: Conexus BOT gateway
+    tier: personal
+    project_code: conexus
+    component: backend
+    repo: LUDIARS/Conexus
+    runtime: node
+    cwd: ${ARS_ROOT}/Conexus
+    command: node dist/src/main.js
+    build_command: npm run build
+    port: 11230
+    autostart: false
+    restart_policy: "no"
+    health:
+      type: http
+      url: http://127.0.0.1:11230/health
+      interval_sec: 30
+      grace_period_sec: 20
+    provides:
+      CONEXUS_URL: http://127.0.0.1:${port}
+    env:
+      CONEXUS_CONFIG: conexus.config.json
+    log_path: ${ARS_ROOT}/logs/conexus

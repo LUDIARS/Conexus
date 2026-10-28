@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "host": "127.0.0.1",
+  "port": 11230,
+  "allowedHosts": ["127.0.0.1:11230", "localhost:11230"],
+  "database": "data/conexus.sqlite",
+  "encryptionKeyEnv": "CONEXUS_DATA_KEY",
+  "retentionDays": 7,
+  "maxPending": 10000,
+  "urlHosts": [],
+  "services": [],
+  "bots": [],
+  "routes": []
+}
